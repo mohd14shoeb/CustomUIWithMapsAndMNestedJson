@@ -1,0 +1,6 @@
+framework module Pods_CustomPickersAndJsonDateAndTimeParsing {
+  umbrella header "Pods-CustomPickersAndJsonDateAndTimeParsing-umbrella.h"
+
+  export *
+  module * { export * }
+}
