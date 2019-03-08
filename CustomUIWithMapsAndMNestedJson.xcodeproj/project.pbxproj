@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		82B71E56411E2C068C7FE13D /* Pods_CustomPickersAndJsonDateAndTimeParsing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD01334D217AF207FB094794 /* Pods_CustomPickersAndJsonDateAndTimeParsing.framework */; };
+		C03B4C1C22328F4000C41586 /* CustomAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03B4C1B22328F4000C41586 /* CustomAnnotation.swift */; };
 		C04F25952231392600EC2A62 /* Rotatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04F25932231392500EC2A62 /* Rotatable.swift */; };
 		C04F25962231392600EC2A62 /* AnimationBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04F25942231392500EC2A62 /* AnimationBarButton.swift */; };
 		C04F259A2231393E00EC2A62 /* CollectionViewHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04F25972231393E00EC2A62 /* CollectionViewHelper.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		7413040645B110DC0AE09F19 /* Pods-CustomPickersAndJsonDateAndTimeParsing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CustomPickersAndJsonDateAndTimeParsing.release.xcconfig"; path = "Pods/Target Support Files/Pods-CustomPickersAndJsonDateAndTimeParsing/Pods-CustomPickersAndJsonDateAndTimeParsing.release.xcconfig"; sourceTree = "<group>"; };
+		C03B4C1B22328F4000C41586 /* CustomAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotation.swift; sourceTree = "<group>"; };
 		C04F25932231392500EC2A62 /* Rotatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rotatable.swift; sourceTree = "<group>"; };
 		C04F25942231392500EC2A62 /* AnimationBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationBarButton.swift; sourceTree = "<group>"; };
 		C04F25972231393E00EC2A62 /* CollectionViewHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewHelper.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		C08D15B6222FC7CE00D57166 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C03B4C1B22328F4000C41586 /* CustomAnnotation.swift */,
 				C04F25942231392500EC2A62 /* AnimationBarButton.swift */,
 				C04F25932231392500EC2A62 /* Rotatable.swift */,
 				C04F258E223138AD00EC2A62 /* ExpandingCells */,
@@ -339,6 +342,7 @@
 				C08D15C0222FDF4000D57166 /* SiteSpecialEvents.swift in Sources */,
 				C04F25B02231835E00EC2A62 /* DemoCollectionViewCell.swift in Sources */,
 				C08D15CE222FE47F00D57166 /* SiteTableViewCell.swift in Sources */,
+				C03B4C1C22328F4000C41586 /* CustomAnnotation.swift in Sources */,
 				C04F259A2231393E00EC2A62 /* CollectionViewHelper.swift in Sources */,
 				C08D15BE222FDF0500D57166 /* SiteHours.swift in Sources */,
 				C04F25A222314A2200EC2A62 /* SiteController.swift in Sources */,

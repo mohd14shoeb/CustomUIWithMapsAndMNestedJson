@@ -25,7 +25,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
     // MARK: Properties
     
     private var sites = [Sites]()
-    private var pinLocationsOnMap = [MKPointAnnotation]()
+    private var pinLocationsOnMap = [MKAnnotation]()
     private var locationManager = CLLocationManager()
     private var panGesture = UIPanGestureRecognizer()
     private var animator = UIViewPropertyAnimator()
@@ -39,6 +39,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         checkLocationServices()
         addPanGestureRecognizer(view: nearestView)
         setIndicatorAnimationForStart()
+        sitesMapView.delegate = self
     }
     
     // MARK: Function's
@@ -125,7 +126,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuth()
-            setPinsOnMapView()
+           // setPinsOnMapView()
         } else {
             let alert = UIAlertController(title: "Location disabled", message: "enable location in settings", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -155,9 +156,28 @@ extension ViewController: CLLocationManagerDelegate {
         let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
         let region = MKCoordinateRegion.init(center: center, latitudinalMeters: 20000, longitudinalMeters: 20000)
         sitesMapView.setRegion(region, animated: true)
+        setPinsOnMapView()
     }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         checkLocationAuth()
+    }
+}
+
+extension ViewController: MKMapViewDelegate {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+       
+        var annotationView = sitesMapView.dequeueReusableAnnotationView(withIdentifier: "anotationView")
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "anotationView")
+        }
+        annotationView?.image = UIImage(named: "coofee")
+        annotationView?.canShowCallout = true
+        return annotationView
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        print(view.annotation?.title as Any)
     }
 }
